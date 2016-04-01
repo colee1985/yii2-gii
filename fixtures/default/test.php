@@ -8,8 +8,7 @@ namespace tests\codeception\common\unit\models;
 use Yii;
 use tests\codeception\common\unit\DbTestCase;
 use Codeception\Specify;
-use boss\models\system\LoginForm;
-use tests\codeception\common\fixtures\UserFixture;
+use tests\codeception\common\fixtures\<?php echo $model->formName()?>Fixture;
 
 /**
  * Login form test
@@ -60,7 +59,7 @@ class LoginFormTest extends DbTestCase
     {
         return [
             '<?php echo $model->formName()?>' => [
-                'class' => UserFixture::className(),
+                'class' => <?php echo $model->formName()?>Fixture::className(),
                 'dataFile' => '@tests/codeception/common/fixtures/data/<?=$schema->name?>.php'
             ],
         ];
