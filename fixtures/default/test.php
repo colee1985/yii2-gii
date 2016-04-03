@@ -13,7 +13,7 @@ use tests\codeception\common\fixtures\<?php echo $model->formName()?>Fixture;
 /**
  * Login form test
  */
-class LoginFormTest extends DbTestCase
+class <?php echo $model->formName()?>Test extends DbTestCase
 {
 
     use Specify;

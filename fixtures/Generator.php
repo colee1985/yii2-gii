@@ -61,6 +61,20 @@ class Generator extends \yii\gii\Generator
                 'model'=>$this->getModel(),
             ])
         );
+        $files[] = new CodeFile(
+            str_replace('/templates', '/unit/models', Yii::getAlias($this->viewPath)) . '/' . $this->getModel()->formName() . 'Test.php',
+            $this->render('test.php',[
+                'model'=>$this->getModel(),
+                'schema'=>$schema,
+            ])
+        );
+        $files[] = new CodeFile(
+            str_replace('/templates', '/unit/cores', Yii::getAlias($this->viewPath)) . '/' . $this->getModel()->formName() . 'Test.php',
+            $this->render('test.php',[
+                'model'=>$this->getModel(),
+                'schema'=>$schema,
+            ])
+        );
     
         return $files;
     }
