@@ -190,7 +190,7 @@ EOD;
         }elseif (in_array($column->type, ['string'])){
             return '$faker->text($maxNbChars = '.$column->size.')';
         }elseif (in_array($column->type, ['integer'])){
-            return '$faker->numberBetween()';
+            return '$faker->buildingNumber()';
         }else{
             return '""';
         }
