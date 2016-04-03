@@ -66,6 +66,7 @@ class Generator extends \yii\gii\Generator
             $this->render('test.php',[
                 'model'=>$this->getModel(),
                 'schema'=>$schema,
+                'dir'=>'models',
             ])
         );
         $files[] = new CodeFile(
@@ -73,6 +74,7 @@ class Generator extends \yii\gii\Generator
             $this->render('test.php',[
                 'model'=>$this->getModel(),
                 'schema'=>$schema,
+                'dir'=>'cores',
             ])
         );
     

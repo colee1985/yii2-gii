@@ -3,7 +3,7 @@
 
 echo "<?php\n";
 ?>
-namespace tests\codeception\common\unit\models;
+namespace tests\codeception\common\unit\<?php echo $dir?>;
 
 use Yii;
 use tests\codeception\common\unit\DbTestCase;
@@ -63,6 +63,10 @@ class <?php echo $model->formName()?>Test extends DbTestCase
                 'dataFile' => '@tests/codeception/common/fixtures/data/<?=$schema->name?>.php'
             ],
         ];
+    }
+    public function testInitData()
+    {
+        
     }
 
 }
