@@ -7,3 +7,7 @@ $config['modules']['gii']['generators'] = [
         ],
     ];
 ```
+> 运行示例:
+	tests/codeception/bin/yii fixture/generate teacher --count=100
+	cd tests/codeception/common/
+	codecept run
