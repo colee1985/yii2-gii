@@ -1,0 +1,30 @@
+{
+      "name": "colee/yii2-gii",
+      "type": "library",
+      "description": "gii library for Yii2 framework",
+      "keywords": [
+          "yii2",
+          "colee",
+          "fixture",
+          "yii2-gii"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/colee1985/yii2-gii",
+      "minimum-stability": "dev",
+      "authors": [
+          {
+              "name": "colee",
+              "email": "5969226@qq.com",
+              "issues": "https://github.com/colee1985/yii2-gii/issues?state=open",
+              "source": "https://github.com/colee1985/yii2-gii"
+          }
+      ],
+      "require": {
+          "php" : "~5.5|~7.0",
+      },
+      "autoload": {
+          "psr-4": {
+              "colee\\gii\\": ""
+          }
+      }
+  }
