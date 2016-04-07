@@ -5,7 +5,9 @@
 
 echo $form->field($generator, 'tableName');
 echo $form->field($generator, 'modelClass');
+echo $form->field($generator, 'base_ns');
 echo $form->field($generator, 'ns');
+echo $form->field($generator, 'core_ns');
 echo $form->field($generator, 'baseClass');
 echo $form->field($generator, 'db');
 echo $form->field($generator, 'useTablePrefix')->checkbox();

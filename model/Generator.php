@@ -25,7 +25,9 @@ use yii\base\NotSupportedException;
 class Generator extends \yii\gii\Generator
 {
     public $db = 'db';
-    public $ns = 'app\models';
+    public $ns = 'common\models';
+    public $core_ns = 'common\cores';
+    public $base_ns = 'common\bases';
     public $tableName;
     public $modelClass;
     public $baseClass = 'yii\db\ActiveRecord';
@@ -86,7 +88,9 @@ class Generator extends \yii\gii\Generator
     public function attributeLabels()
     {
         return array_merge(parent::attributeLabels(), [
-            'ns' => 'Namespace',
+            'ns' => 'Model Namespace',
+            'core_ns' => 'Core Namespace',
+            'base_ns' => 'Base Namespace',
             'db' => 'Database Connection ID',
             'tableName' => 'Table Name',
             'modelClass' => 'Model Class',
@@ -198,6 +202,14 @@ class Generator extends \yii\gii\Generator
             $files[] = new CodeFile(
                 Yii::getAlias('@' . str_replace('\\', '/', $this->ns)) . '/' . $modelClassName . '.php',
                 $this->render('model.php', $params)
+            );
+            $files[] = new CodeFile(
+                Yii::getAlias('@' . str_replace('\\', '/', $this->core_ns)) . '/' . $modelClassName . '.php',
+                $this->render('core.php', $params)
+            );
+            $files[] = new CodeFile(
+                Yii::getAlias('@' . str_replace('\\', '/', $this->base_ns)) . '/' . $modelClassName . '.php',
+                $this->render('base.php', $params)
             );
 
             // query :
