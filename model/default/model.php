@@ -33,7 +33,7 @@ use Yii;
 <?php endforeach; ?>
 <?php endif; ?>
  */
-class <?= $className ?> extends <?= '\\' . ltrim($generator->base_ns, '\\') .$className. "\n" ?>
+class <?= $className ?> extends <?= '\\' . ltrim($generator->base_ns, '\\') .'\\'.$className. "\n" ?>
 {
     
 }
