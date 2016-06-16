@@ -1,5 +1,6 @@
 # yii2-gii 扩展
 ---
+安装：composer require colee/yii2-gii  
 
 ## 夹具数据模版生产工具
 ### usage
