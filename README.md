@@ -4,6 +4,7 @@
 
 ## 夹具数据模版生产工具
 ### usage
+在配置中添加  
 ``` php
 $config['modules']['gii']['generators'] = [
     'fixtures' => [
@@ -11,7 +12,10 @@ $config['modules']['gii']['generators'] = [
     ],
 ];
 ```
-运行示例:   
+> 通过访问 http://127.0.0.1:8080/gii/fixtures 生成夹具模版   
+> 并前往模版编写写测试用例  
+
+运行测试用例:   
 ```shell
 	tests/codeception/bin/yii fixture/generate teacher --count=100
 	cd tests/codeception/common/
@@ -23,7 +27,9 @@ $config['modules']['gii']['generators'] = [
 > bases  ---  基础层  
 > models ---  实例方法层  
 > cores  ---  核心层，对外接口，静态方法为主  
+
 ### usage
+在配置中添加  
 ``` php
 $config['modules']['gii']['generators'] = [
     'model' => [
