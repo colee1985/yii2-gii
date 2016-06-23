@@ -1,6 +1,25 @@
 # yii2-gii 扩展
----
+==================================
 安装：composer require colee/yii2-gii  
+
+
+
+## Model分层说明
+> common里分了三层   
+> bases  ---  基础层  
+> models ---  实例方法层  
+> cores  ---  核心层，对外接口，静态方法为主  
+
+### usage
+在配置中添加  
+``` php
+$config['modules']['gii']['generators'] = [
+    'model' => [
+        'class' => 'colee\gii\model\Generator'
+    ],
+];
+```
+--------------------------------------------
 
 ## 夹具数据模版生产工具
 ### usage
@@ -22,18 +41,3 @@ $config['modules']['gii']['generators'] = [
 	codecept run
 ```
 
-## Model分层生成
-> common里分了三层   
-> bases  ---  基础层  
-> models ---  实例方法层  
-> cores  ---  核心层，对外接口，静态方法为主  
-
-### usage
-在配置中添加  
-``` php
-$config['modules']['gii']['generators'] = [
-    'model' => [
-        'class' => 'colee\gii\model\Generator'
-    ],
-];
-```
