@@ -1,6 +1,6 @@
 # yii2-gii 扩展
 ==================================
-安装：composer require colee/yii2-gii  
+安装：composer require colee/yii2-gii --prefer-dist
 
 
 
